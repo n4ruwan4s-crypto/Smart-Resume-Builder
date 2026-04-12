@@ -1,0 +1,7 @@
+[build]
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/get-hash"
+  to   = "/.netlify/functions/get-hash"
+  status = 200
