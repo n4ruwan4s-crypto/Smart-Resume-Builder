@@ -2409,11 +2409,7 @@ function showModalStep(step) {
 async function getHashFromServer(orderId) {
   try {
     // Calls Netlify Function at /.netlify/functions/get-hash (aliased to /get-hash via netlify.toml)
-    const res = await fetch('https://your-netlify-site.netlify.app/.netlify/functions/get-hash', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ order_id: orderId })
-    });
+    const res = await fetch('/get-hash');
     if (!res.ok) throw new Error('Server error ' + res.status);
     const data = await res.json();
     return data.hash;
