@@ -1178,7 +1178,7 @@ input[type=color]{
     <div class="color-row" id="landing-colors"></div>
   </div>
 
-  <button class="btn-primary" onclick="goToBuilder()">Start Building →</button>
+  <button class="btn-primary" onclick="openPrivacyFromLanding()">Start Building →</button>
 </div>
 
 <!-- ══════════════════════════════════════════════
@@ -1509,8 +1509,45 @@ input[type=color]{
               </div>
             </div>
             <div class="hela-recipient" style="text-align:center;margin-bottom:6px">
-              <div class="hela-recipient-name" style="font-size:13px;font-weight:700;color:#f0f0fa">Scan to Pay Rs.500</div>
-              <div class="hela-recipient-number" style="font-size:11px;color:#8888aa;margin-top:3px">Use any banking app · Lanka QR / CEFT</div>
+              <div class="hela-recipient-name" style="font-size:13px;font-weight:700;color:#4747ab">Scan to Pay Rs.500</div>
+              <div class="hela-recipient-number" style="font-size:11px;color:#8888aa;margin-top:3px">Lanka QR / CEFT · Use a payment app (not camera)</div>
+            </div>
+
+            <!-- QR How-To Guide -->
+            <div style="background:rgba(124,109,250,0.07);border:1.5px solid rgba(124,109,250,0.2);border-radius:12px;padding:12px 14px;margin-top:4px;margin-bottom:2px;">
+              <div style="font-size:10px;font-weight:700;color:#a89dfc;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:9px;">📋 How to Scan &amp; Pay — Step by Step</div>
+
+              <!-- Warning box -->
+              <div style="display:flex;align-items:flex-start;gap:8px;background:rgba(240,180,40,0.1);border:1px solid rgba(240,180,40,0.3);border-radius:8px;padding:8px 10px;margin-bottom:10px;">
+                <span style="font-size:14px;margin-top:1px">⚠️</span>
+                <span style="font-size:11px;color:#f0c040;line-height:1.5;font-weight:600">Your phone camera <u>cannot</u> scan this QR. You must use a banking or payment app that supports Lanka QR.</span>
+              </div>
+
+              <!-- Steps -->
+              <div style="display:flex;flex-direction:column;gap:7px;">
+                <div style="display:flex;align-items:flex-start;gap:9px;">
+                  <div style="min-width:22px;height:22px;background:#7c6dfa;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0;">1</div>
+                  <span style="font-size:11.5px;color:#c8c8e8;line-height:1.5;">Open your <strong style="color:#8d8ddf;">banking or payment app</strong> on your phone.</span>
+                </div>
+                <div style="display:flex;align-items:flex-start;gap:9px;">
+                  <div style="min-width:22px;height:22px;background:#7c6dfa;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0;">2</div>
+                  <span style="font-size:11.5px;color:#c8c8e8;line-height:1.5;">Look for <strong style="color:#8d8ddf;">"Scan" / "QR Pay" / "Lanka QR"</strong> inside the app.</span>
+                </div>
+                <div style="display:flex;align-items:flex-start;gap:9px;">
+                  <div style="min-width:22px;height:22px;background:#7c6dfa;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0;">3</div>
+                  <span style="font-size:11.5px;color:#c8c8e8;line-height:1.5;">Point the in-app scanner at the QR code above.</span>
+                </div>
+                <div style="display:flex;align-items:flex-start;gap:9px;">
+                  <div style="min-width:22px;height:22px;background:#7c6dfa;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0;">4</div>
+                  <span style="font-size:11.5px;color:#c8c8e8;line-height:1.5;">Confirm the amount <strong style="color:#a89dfc;">Rs. 500.00</strong> and complete the payment.</span>
+                </div>
+                <div style="display:flex;align-items:flex-start;gap:9px;">
+                  <div style="min-width:22px;height:22px;background:#22d3a0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#111;flex-shrink:0;">5</div>
+                  <span style="font-size:11.5px;color:#c8c8e8;line-height:1.5;">Take a screenshot of the payment confirmation &amp; upload it below.</span>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -1526,7 +1563,7 @@ input[type=color]{
               </div>
               <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--surface);border-radius:8px;">
                 <span style="font-size:11px;color:var(--text2)">Bank</span>
-                <span style="font-size:13px;font-weight:700;color:#f0f0fa">Nations Trust Banka</span>
+                <span style="font-size:13px;font-weight:700;color:#f0f0fa">Nations Trust Bank</span>
               </div>
               <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--surface);border-radius:8px;">
                 <span style="font-size:11px;color:var(--text2)">Branch</span>
@@ -1677,7 +1714,7 @@ input[type=color]{
       <div style="font-size:13px;font-weight:700;margin-bottom:7px">What happens to my data?</div>
       <div style="font-size:12px;color:#475569;line-height:1.9">• All CV data is processed entirely in your browser using JavaScript<br>• Your name, email, phone, work history never leave your device<br>• Closing the browser tab permanently clears all data<br>• Generated CV files (PDF / Word) are downloaded directly to your device<br>• We do not use cookies to track personal information</div>
     </div>
-    <button onclick="closePrivacy()" style="width:100%;padding:12px;background:#1e293b;color:#fff;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer">Got it, close</button>
+    <button id="privacy-got-it-btn" onclick="privacyGotIt()" style="width:100%;padding:12px;background:#1e293b;color:#fff;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer">Got it, close</button>
   </div>
 </div>
 
@@ -2731,6 +2768,24 @@ function escW(s){
 // ─── PRIVACY ─────────────────────────────────────────────────────
 function openPrivacy(){document.getElementById('privacy-modal').classList.add('open')}
 function closePrivacy(){document.getElementById('privacy-modal').classList.remove('open')}
+
+// Called from "Start Building" on landing page — show privacy first, then go to builder
+let _privacyFromLanding = false;
+function openPrivacyFromLanding(){
+  _privacyFromLanding = true;
+  var btn = document.getElementById('privacy-got-it-btn');
+  if(btn){ btn.textContent = 'Got it — Start Building →'; }
+  openPrivacy();
+}
+function privacyGotIt(){
+  closePrivacy();
+  if(_privacyFromLanding){
+    _privacyFromLanding = false;
+    var btn = document.getElementById('privacy-got-it-btn');
+    if(btn){ btn.textContent = 'Got it, close'; }
+    goToBuilder();
+  }
+}
 
 // ─── INIT ─────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded',()=>{
